@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TravelConsuption</string>
-    <string name="cabecalho">Aplicativo para calcular o consumo de viagens!</string>
+    <string name="text_header">Aplicativo para calcular o consumo de viagens!</string>
     <string name="resul">R$ 0</string>
 </resources>
