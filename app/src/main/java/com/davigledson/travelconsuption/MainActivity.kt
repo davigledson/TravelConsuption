@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var binding = ActivityMainBinding.inflate(layoutInflater)
+         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //View -> elemento do app
     // Binding -> ligacao com o  nosso codigo
@@ -25,7 +25,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     }
     private fun calculate(){
         //Toast notification
-        Toast.makeText(this,"Voce realizou um click",Toast.LENGTH_SHORT).show()
+        val distance = binding.editDistance.text.toString().toFloat()
+        val price = binding.editPrice.text.toString().toFloat()
+        val autonomty = binding.editAutonomy.text.toString().toFloat()
+
+        val totalValue = (price * distance) / autonomty
+        val totalValueStr = "R$ ${"%.2f".format(totalValue)}"
+        binding.labelResul.text = totalValueStr
+       // Toast.makeText(this,totalValue.toString(),Toast.LENGTH_SHORT).show()
+
     }
 
     fun teste(view: View) {}

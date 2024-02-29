@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/edit_distance"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Distancia"
@@ -46,6 +47,7 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/edit_price"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Preço"
@@ -68,6 +70,7 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/edit_autonomy"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Autonomia"
@@ -103,6 +106,7 @@
         android:textAllCaps="true"
         android:textSize="20dp" />
     <TextView
+        android:id="@+id/label_Resul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
