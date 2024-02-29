@@ -74,7 +74,7 @@
         android:inputType="numberDecimal"
 
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/tituto"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -116,6 +116,7 @@
         android:textSize="32dp" />
 
     <Button
+
         android:id="@+id/buttonCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
