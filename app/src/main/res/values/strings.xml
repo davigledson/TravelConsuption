@@ -2,4 +2,6 @@
     <string name="app_name">TravelConsuption</string>
     <string name="text_header">Aplicativo para calcular o consumo de viagens!</string>
     <string name="resul">R$ 0</string>
+    <string name="validation_all_filters" >Preencha todos os campos</string>
+    <string name="validation_division_by_0" >Não existe divisão por 0</string>
 </resources>

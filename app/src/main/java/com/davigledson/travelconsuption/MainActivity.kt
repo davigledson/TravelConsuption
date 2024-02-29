@@ -24,19 +24,38 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     }
     private fun calculate(){
-        //Toast notification
-        val distance = binding.editDistance.text.toString().toFloat()
-        val price = binding.editPrice.text.toString().toFloat()
-        val autonomty = binding.editAutonomy.text.toString().toFloat()
+        if(isValid()){
+            //Toast notification
+            val distance = binding.editDistance.text.toString().toFloat()
+            val price = binding.editPrice.text.toString().toFloat()
+            val autonomy = binding.editAutonomy.text.toString().toFloat()
+            if(autonomy ==0f){
+                Toast.makeText(this,R.string.validation_division_by_0,Toast.LENGTH_SHORT).show()
+                binding.labelResul.text = "R$ 0"
+            } else{
+                val totalValue = (price * distance) / autonomy
+                val totalValueStr = "R$ ${"%.2f".format(totalValue)}"
+                binding.labelResul.text = totalValueStr
+            }
 
-        val totalValue = (price * distance) / autonomty
-        val totalValueStr = "R$ ${"%.2f".format(totalValue)}"
-        binding.labelResul.text = totalValueStr
-       // Toast.makeText(this,totalValue.toString(),Toast.LENGTH_SHORT).show()
+
+        } else {
+             Toast.makeText(this,R.string.validation_all_filters,Toast.LENGTH_SHORT).show()
+        }
+
 
     }
 
     fun teste(view: View) {}
+    private fun isValid():Boolean{
+        return (
+                binding.editDistance.text.toString() != ""
+                        && binding.editPrice.text.toString() != ""
+                        && binding.editAutonomy.text.toString() != ""
+                        //&& binding.editAutonomy.text.toString().toFloat() != 0f
+                )
+    }
+
     override fun onClick(view: View) {
 
             if(view.id == R.id.buttonCalculate){
